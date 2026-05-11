@@ -15,14 +15,14 @@ def transaction_page():
     balance = float(balance or 0)
 
     # Define margin limit (80% of income)
-    margin_limit = 0.8 * total_income if total_income > 0 else 0
+    margin_limit = 0.4 * total_income if total_income > 0 else 0
 
     # ---------------- MARGIN ALERT ----------------
     if total_income == 0:
-        st.info("ℹ️ Add an income first to set your expense margin limit (80% of income).")
+        st.info("ℹ️ Add an income first to set your expense margin limit (40% of income).")
     elif total_expense >= margin_limit:
         st.error(f"⚠️ Alert: Your expenses ₹{total_expense:.2f} have **exceeded the 80% margin limit** of ₹{margin_limit:.2f}!")
-    elif total_expense >= 0.7 * total_income:
+    elif total_expense >= 0.4 * total_income:
         st.warning(f"⚠️ Caution: You've spent around {((total_expense / total_income) * 100):.1f}% of your income. "
                    f"You're nearing the 80% limit (₹{margin_limit:.2f}).")
     else:
