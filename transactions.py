@@ -54,7 +54,7 @@ def transaction_page():
                 if new_total > margin_limit:
                     st.error(
                         f"⚠️ Cannot add this expense! "
-                        f"Your total expenses (₹{new_total:.2f}) exceed 80% of your income (₹{margin_limit:.2f})."
+                        f"Your total expenses (₹{new_total:.2f}) exceed 40% of your income (₹{margin_limit:.2f})."
                     )
                 else:
                     add_expense(st.session_state['user'], title, date, amount, category, description)
