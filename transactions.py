@@ -46,7 +46,7 @@ def transaction_page():
         # Show current financial summary
         st.info(f"💰 Total Income: ₹{total_income:.2f}")
         st.info(f"📤 Current Expenses: ₹{total_expense:.2f}")
-        st.info(f"🚨 Expense Limit (80% of Income): ₹{margin_limit:.2f}")
+        st.info(f"🚨 Expense Limit (40% of Income): ₹{margin_limit:.2f}")
 
         if st.button("Add Expense"):
             if title and amount:

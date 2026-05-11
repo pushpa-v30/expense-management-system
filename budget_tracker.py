@@ -51,7 +51,7 @@ def budget_page(user_email):
         st.info("ℹ️ Please set a limit to start tracking.")
     elif expenses > current_limit:
         st.error("🚨 You’ve exceeded your expense limit!")
-    elif expenses > 0.8 * current_limit:
+    elif expenses > 0.4 * current_limit:
         st.warning("⚠️ You’re close to your limit. Control spending!")
     else:
         st.success("✅ You’re within your budget. Keep saving!")
